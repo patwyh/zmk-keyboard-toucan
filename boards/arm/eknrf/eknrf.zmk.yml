@@ -1,0 +1,10 @@
+file_format: "1"
+id: eknrf
+name: Puchi-BLE V1
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://www.ergokeeb.com
+exposes: [pro_micro]
