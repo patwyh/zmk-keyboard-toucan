@@ -22,19 +22,19 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 1)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 0)>,
-                <NRF_PSEL(SPIM_MISO, 0, 0)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 12)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 26)>,
+                <NRF_PSEL(SPIM_MISO, 0, 5)>;
         };
     };
 
-     spi0_sleep: spi0_sleep {
+    spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 1)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 0)>,
-                <NRF_PSEL(SPIM_MISO, 0, 0)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 12)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 26)>,
+                <NRF_PSEL(SPIM_MISO, 0, 5)>;
             low-power-enable;
-            bias-pull-down; // minimize power leakage during sleep
+            bias-pull-down; 
         };
     };
 
@@ -52,17 +52,16 @@
                 <NRF_PSEL(SPIM_MOSI, 0, 0)>,
                 <NRF_PSEL(SPIM_MISO, 0, 0)>;
             low-power-enable;
-            bias-pull-down; // minimize power leakage during sleep
         };
     };
 };
 
 
-nice_view_spi: &spi0 {
+nice_view_spi: &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>, // nice view
 };
@@ -70,8 +69,8 @@ nice_view_spi: &spi0 {
 &spi0 {
    compatible = "nordic,nrf-spim";
    status = "okay";
-   pinctrl-0 = <&spi1_default>;
-   pinctrl-1 = <&spi1_sleep>;
+   pinctrl-0 = <&spi0_default>;
+   pinctrl-1 = <&spi0_sleep>;
    pinctrl-names = "default", "sleep";
    cs-gpios = <&gpio1 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // pull-up to ensure CS is !asserted when asleep
    glidepoint:  glidepoint@0 {
