@@ -10,7 +10,13 @@ endif
 
 if SHIELD_JORNE_LEFT || SHIELD_JORNE_RIGHT
 
+config SPI
+    default y
+
 config ZMK_SPLIT
+    default y
+
+config ZMK_POINTING
     default y
 
 endif
