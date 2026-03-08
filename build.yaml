@@ -20,10 +20,10 @@
 ---
 include:
   - board: nrfmicro_13
-    shield: jorne_left nice_view
+    shield: jorne_left nice_view_adapter nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nrfmicro_13
-    shield: jorne_right nice_view
+    shield: jorne_right nice_view_adapter nice_view
   - board: nrfmicro_13
     shield: settings_reset
