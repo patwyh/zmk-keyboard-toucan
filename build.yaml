@@ -20,10 +20,10 @@
 ---
 include:
   - board: nrfmicro_13
-    shield: toucan_left rgbled_adapter nice_view_gem
+    shield: jorne_left #rgbled_adapter nice_view_gem
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nrfmicro_13
-    shield: toucan_right rgbled_adapter
+    shield: jorne_right #rgbled_adapter
   - board: nrfmicro_13
     shield: settings_reset
