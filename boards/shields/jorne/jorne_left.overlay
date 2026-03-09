@@ -39,6 +39,6 @@
     status = "disabled";
 };
 
-&glidepoint_listener {
-    status = "okay";
-};
+// &glidepoint_listener {
+//     status = "okay";
+// };
