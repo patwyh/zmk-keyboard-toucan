@@ -35,7 +35,7 @@ nice_view_spi: &spi0 {
    cs-gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
 };
 
-&pro_micro_i2c {
+&i2c0 {
     status = "disabled";
 };
 
