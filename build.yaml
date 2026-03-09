@@ -19,13 +19,13 @@
 #
 ---
 include:
-  - board: eknrf
+  - board: puchi_ble_v1
     shield: jorne_left ek_adapter nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
 
-  - board: eknrf
+  - board: puchi_ble_v1
     shield: jorne_right ek_adapter nice_view
 
-  - board: eknrf
+  - board: puchi_ble_v1
     shield: settings_reset
