@@ -1,6 +1,6 @@
 file_format: "1"
-id: eknrf
-name: Puchi-BLE V1
+id: eknrf_v1
+name: EKNRF V1
 type: board
 arch: arm
 outputs:
