@@ -20,10 +20,10 @@
 ---
 include:
   - board: eknrf
-    shield: jorne_left nice_view_adapter nice_view
+    shield: jorne_left nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: eknrf
-    shield: jorne_right nice_view_adapter nice_view
+    shield: jorne_right nice_view
   - board: eknrf
     shield: settings_reset
