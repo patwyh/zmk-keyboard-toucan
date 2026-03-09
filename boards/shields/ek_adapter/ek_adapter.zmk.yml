@@ -1,0 +1,7 @@
+file_format: "1"
+id: ek_adapter
+name: ek adapter
+type: shield
+url: https://ergokeeb.com
+requires: [i2c_oled]
+exposes: [ek_header]
