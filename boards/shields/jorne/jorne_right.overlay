@@ -34,7 +34,6 @@
                 <NRF_PSEL(SPIM_MOSI, 0, 0)>,
                 <NRF_PSEL(SPIM_MISO, 0, 0)>;
             low-power-enable;
-            bias-pull-down; 
         };
     };
 
@@ -52,6 +51,7 @@
                 <NRF_PSEL(SPIM_MOSI, 0, 26)>,
                 <NRF_PSEL(SPIM_MISO, 0, 5)>;
             low-power-enable;
+            bias-pull-down; 
         };
     };
 };
